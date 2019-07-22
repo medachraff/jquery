@@ -1,0 +1,46 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyBa2JI41AM-dkK0VGd2AdgQLykmH7NZWCA",
+    authDomain: "myproj-2517e.firebaseapp.com",
+    databaseURL: "https://myproj-2517e.firebaseio.com",
+    projectId: "myproj-2517e",
+    storageBucket: "myproj-2517e.appspot.com",
+    messagingSenderId: "284088258073",
+    appId: "1:284088258073:web:54721cd5394f2b22"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  var messagesRef = firebase.database().ref('Contact');
+
+// Listen for form submit
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+// Submit form
+function submitForm(e){
+  e.preventDefault();
+
+  // Get values
+  var name = getInputVal('name');
+  var track = getInputVal('track');
+  var email = getInputVal('email');
+  var phone = getInputVal('phone');
+  // Save message
+  saveMessage(name,track,email,phone);
+
+}
+
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveMessage(name,track,email,phone){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name:name,
+    track:track,
+    email:email,
+    phone:phone
+  });
+}

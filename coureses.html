@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>courses</title>
+    <!-- Remember to include jQuery :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+</head>
+
+<body>
+    <header>
+        <ul class="navbar">
+            <li><a class="lien" href="./index.html">home</a></li>
+            <li><a class="lien" href="./coureses.html">courses</a></li>
+            <li><a class="lien" href="./contact.html">contact</a></li>
+        </ul>
+    </header>
+    <div class="image-courses">
+        <h1 class="text-cr">Courses</h1>
+    </div>
+    <div class="phts">
+        <a href="#ex1" rel="modal:open"><button class="viewmore1">view more</button></a>
+        <a href="#ex1" rel="modal:open"><button class="viewmore2">view more</button></a>
+        <a href="#ex1" rel="modal:open"><button class="viewmore3">view more</button></a>
+    </div>
+    <div class="phts">
+        <a href="#ex1" rel="modal:open"><button class="viewmore4">view more</button></a>
+        <a href="#ex1" rel="modal:open"><button class="viewmore5">view more</button></a>
+        <a href="#ex1" rel="modal:open"><button class="viewmore6">view more</button></a>
+    </div>
+    <div class="phts">
+        <a href="#ex1" rel="modal:open"><button class="viewmore7">view more</button></a>
+        <a href="#ex1" rel="modal:open"><button class="viewmore8">view more</button></a>
+        <a href="#ex1" rel="modal:open"><button class="viewmore9">view more</button></a>
+    </div>
+    <h1 class="courses">feedback</h1>
+    <div class="pix">
+        <div>
+            <button onclick="makebold()">B</button>
+            <button onclick="makeitalic()">I</button>
+            <BUtton onclick="makeunderline()">Underline</BUtton>
+            <select id="selectSize" onchange="changeSize()">
+                <option>20px</option>
+                <option>30px</option>
+                <option> 40px</option>
+            </select>
+            <select id="selectfamily" onchange="changefamily()">
+                <option value="arial">arial</option>
+                <option value="verdana">verdana</option>
+                <option value="geneva">geneva</option>
+            </select>
+            <textarea id="area" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <div id="ex1" class="modal">
+        <p>This is go my code track.<br>
+            each track has its own goal.<br>
+            by adopting this track, you choose your own goal.</p>
+        <a href="#" rel="modal:close">Close</a>
+    </div>
+
+</body>
+<script src="./main.js"></script>
+
+</html>
